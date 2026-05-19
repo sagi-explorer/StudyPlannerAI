@@ -1,0 +1,249 @@
+.card {
+  margin: 8px 0;
+  padding: 16px;
+  border-radius: var(--sp-radius-lg);
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  animation: slideIn var(--sp-transition-normal) ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--sp-color-warning);
+}
+
+.warnBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--sp-color-error);
+}
+
+.aiAnalysis {
+  padding: 10px 12px;
+  border-radius: var(--sp-radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--sp-color-text);
+}
+
+.aiAnalysis p {
+  margin: 0 0 8px;
+}
+
+.aiAnalysis p:last-child {
+  margin-bottom: 0;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sp-color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dateValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sp-color-primary);
+}
+
+.dateInput {
+  padding: 4px 8px;
+  border-radius: var(--sp-radius-md);
+  border: 1px solid var(--sp-color-border);
+  background: transparent;
+  color: var(--sp-color-text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.dateInput:focus {
+  border-color: var(--sp-color-primary);
+}
+
+.editBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  transition: all var(--sp-transition-fast);
+}
+
+.editBtn:hover {
+  color: var(--sp-color-primary);
+  border-color: var(--sp-color-primary);
+}
+
+.densityChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 64px;
+  padding: 0 4px;
+}
+
+.densityBar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.densityFill {
+  width: 100%;
+  max-width: 28px;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  background: var(--sp-color-primary);
+  opacity: 0.6;
+  transition: height var(--sp-transition-normal);
+}
+
+.densityLabel {
+  font-size: 10px;
+  color: var(--sp-color-text-secondary);
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.densityCount {
+  font-size: 10px;
+  color: var(--sp-color-text-secondary);
+  position: absolute;
+  top: -2px;
+}
+
+.relatedList {
+  margin: 0;
+  padding: 0 0 0 16px;
+  font-size: 13px;
+  color: var(--sp-color-text);
+}
+
+.relatedList li {
+  margin-bottom: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.confirmBtn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: var(--sp-radius-md);
+  background: var(--sp-color-warning);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.confirmBtn:hover {
+  filter: brightness(1.1);
+}
+
+.confirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancelBtn {
+  padding: 6px 16px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.cancelBtn:hover {
+  color: var(--sp-color-text);
+  border-color: var(--sp-color-text-secondary);
+}
+
+.cancelBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.resolved {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.resolvedLabel {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+  text-align: right;
+  font-style: italic;
+}

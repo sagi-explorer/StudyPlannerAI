@@ -1,0 +1,77 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.viewSwitch {
+  display: flex;
+  gap: 2px;
+  background: var(--sp-color-bg-elevated);
+  border-radius: var(--sp-radius-md);
+  padding: 2px;
+  border: 1px solid var(--sp-color-border);
+}
+
+.viewBtn {
+  padding: 4px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.viewBtn:hover {
+  color: var(--sp-color-text);
+}
+
+.viewBtnActive {
+  background: var(--sp-color-primary);
+  color: #fff;
+}
+
+.goalPlaceholder {
+  height: 6px;
+  background: var(--sp-color-bg-elevated);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--sp-color-error);
+  font-size: 13px;
+}

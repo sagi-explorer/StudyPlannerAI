@@ -1,0 +1,142 @@
+.card {
+  margin: 8px 0;
+  padding: 14px 16px;
+  border-radius: var(--sp-radius-lg);
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  animation: slideIn var(--sp-transition-normal) ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badgeAdd {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--sp-status-done);
+}
+
+.badgeEdit {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--sp-status-in-progress);
+}
+
+.badgePostpone {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--sp-color-warning);
+}
+
+.badgeDelete {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--sp-color-error);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.taskItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: var(--sp-radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.taskTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sp-color-text);
+}
+
+.taskMeta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.confirmBtn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: var(--sp-radius-md);
+  background: var(--sp-color-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.confirmBtn:hover {
+  background: var(--sp-color-primary-hover);
+}
+
+.confirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancelBtn {
+  padding: 6px 16px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.cancelBtn:hover {
+  color: var(--sp-color-text);
+  border-color: var(--sp-color-text-secondary);
+}
+
+.cancelBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.resolved {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.resolvedLabel {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+  text-align: right;
+  font-style: italic;
+}

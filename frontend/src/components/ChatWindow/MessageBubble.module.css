@@ -1,0 +1,175 @@
+.bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  animation: fadeIn var(--sp-transition-normal) ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.user {
+  align-self: flex-end;
+}
+
+.assistant {
+  align-self: flex-start;
+}
+
+.system {
+  align-self: center;
+  max-width: 90%;
+}
+
+.userContent {
+  padding: 10px 14px;
+  border-radius: var(--sp-radius-lg) var(--sp-radius-lg) 4px var(--sp-radius-lg);
+  background: var(--sp-color-primary);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.assistantContent {
+  padding: 12px 16px;
+  border-radius: var(--sp-radius-lg) var(--sp-radius-lg) var(--sp-radius-lg) 4px;
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  color: var(--sp-color-text);
+  font-size: 14px;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.assistantContent p {
+  margin: 0 0 8px;
+}
+
+.assistantContent p:last-child {
+  margin-bottom: 0;
+}
+
+.assistantContent code {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.assistantContent pre {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  padding: 12px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.assistantContent pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+}
+
+.assistantContent ul,
+.assistantContent ol {
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+.assistantContent li {
+  margin: 2px 0;
+}
+
+.assistantContent blockquote {
+  border-left: 3px solid var(--sp-color-primary);
+  padding-left: 12px;
+  margin: 8px 0;
+  color: var(--sp-color-text-secondary);
+}
+
+.assistantContent h1,
+.assistantContent h2,
+.assistantContent h3 {
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+.assistantContent h1 { font-size: 18px; }
+.assistantContent h2 { font-size: 16px; }
+.assistantContent h3 { font-size: 15px; }
+
+.assistantContent a {
+  color: var(--sp-color-primary-hover);
+  text-decoration: underline;
+}
+
+.assistantContent table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.assistantContent th,
+.assistantContent td {
+  border: 1px solid var(--sp-color-border);
+  padding: 6px 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.assistantContent th {
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+}
+
+.systemContent {
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+  text-align: center;
+  font-style: italic;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: var(--sp-color-text-secondary);
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.user .timestamp {
+  text-align: right;
+}
+
+.typingIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border-radius: var(--sp-radius-lg) var(--sp-radius-lg) var(--sp-radius-lg) 4px;
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sp-color-text-secondary);
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+.dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}

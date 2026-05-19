@@ -1,0 +1,65 @@
+.field {
+  margin-bottom: 16px;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sp-color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.metaRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metaItem {
+  flex: 1;
+}
+
+.typeSelector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.typeBtn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  background: var(--sp-color-bg-container);
+  color: var(--sp-color-text-secondary);
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.typeBtn:hover {
+  border-color: var(--sp-color-primary);
+  color: var(--sp-color-text);
+}
+
+.typeBtnActive {
+  border-color: var(--sp-color-primary);
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--sp-color-primary);
+}
+
+.typeIcon {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.dangerZone {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sp-color-border);
+}

@@ -1,0 +1,75 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-xl);
+  padding: 40px;
+  text-align: center;
+  max-width: 440px;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.emoji {
+  font-size: 56px;
+  margin-bottom: 16px;
+  animation: celebrate 0.8s ease 0.3s both;
+}
+
+@keyframes celebrate {
+  0% { transform: scale(0) rotate(-20deg); }
+  60% { transform: scale(1.3) rotate(10deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--sp-color-primary), var(--sp-color-success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.goalName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-color-text);
+  margin-bottom: 16px;
+}
+
+.message {
+  font-size: 14px;
+  color: var(--sp-color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}

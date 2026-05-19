@@ -1,0 +1,83 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--sp-color-primary), var(--sp-color-success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab {
+  position: relative;
+  padding: 6px 16px;
+  border: none;
+  border-radius: var(--sp-radius-md);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.tab:hover {
+  color: var(--sp-color-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tabActive {
+  color: var(--sp-color-text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tabActive::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: var(--tab-color, var(--sp-color-primary));
+  border-radius: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.navBtn {
+  color: var(--sp-color-text-secondary) !important;
+  font-size: 13px !important;
+}
+
+.navBtn:hover {
+  color: var(--sp-color-text) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.navBtnActive {
+  color: var(--sp-color-primary) !important;
+}

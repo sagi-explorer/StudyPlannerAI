@@ -1,0 +1,226 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-xl);
+  width: 480px;
+  max-width: 90vw;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-color-text);
+}
+
+.closeBtn {
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: var(--sp-radius-sm);
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--sp-color-text);
+}
+
+.tagList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tagItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(42, 42, 62, 0.3);
+}
+
+.tagItem:last-child {
+  border-bottom: none;
+}
+
+.colorPicker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--sp-color-border);
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.colorPicker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.colorPicker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.tagNameInput {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: var(--sp-radius-sm);
+  background: transparent;
+  color: var(--sp-color-text);
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: all var(--sp-transition-fast);
+}
+
+.tagNameInput:hover {
+  border-color: var(--sp-color-border);
+}
+
+.tagNameInput:focus {
+  border-color: var(--sp-color-primary);
+  background: var(--sp-color-bg-container);
+}
+
+.tagCount {
+  font-size: 11px;
+  color: var(--sp-color-text-secondary);
+  flex-shrink: 0;
+}
+
+.tagActions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.tagActionBtn {
+  padding: 4px 6px;
+  border: none;
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: var(--sp-radius-sm);
+  line-height: 1;
+}
+
+.tagActionBtn:hover {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--sp-color-primary);
+}
+
+.tagActionBtnDanger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--sp-color-error);
+}
+
+.mergeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  margin-top: 4px;
+  background: rgba(124, 58, 237, 0.05);
+  border-radius: var(--sp-radius-sm);
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+}
+
+.mergeSelect {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-sm);
+  background: var(--sp-color-bg-container);
+  color: var(--sp-color-text);
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+}
+
+.mergeConfirmBtn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: var(--sp-radius-sm);
+  background: var(--sp-color-primary);
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mergeCancelBtn {
+  padding: 4px 10px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-sm);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 11px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.deleteConfirm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--sp-color-text-secondary);
+}
+
+.deleteConfirmBtn {
+  padding: 2px 8px;
+  border: none;
+  border-radius: var(--sp-radius-sm);
+  background: var(--sp-color-error);
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.deleteCancelBtn {
+  padding: 2px 8px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-sm);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 11px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.emptyTags {
+  text-align: center;
+  padding: 32px 0;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+}

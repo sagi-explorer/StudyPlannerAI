@@ -1,0 +1,72 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--sp-color-border);
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sp-color-text);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterBtn {
+  padding: 4px 12px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-sm);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.filterBtn:hover {
+  border-color: var(--sp-color-primary);
+  color: var(--sp-color-text);
+}
+
+.filterBtnActive {
+  border-color: var(--sp-color-primary);
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--sp-color-primary);
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--sp-color-text-secondary);
+}
+
+.error {
+  padding: 20px;
+  text-align: center;
+  color: var(--sp-color-error);
+  font-size: 13px;
+}

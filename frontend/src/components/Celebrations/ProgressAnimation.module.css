@@ -1,0 +1,96 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card {
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-xl);
+  padding: 32px 40px;
+  text-align: center;
+  max-width: 400px;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.emoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+  animation: bounce 0.6s ease 0.3s both;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sp-color-text);
+  margin-bottom: 8px;
+}
+
+.goalName {
+  font-size: 14px;
+  color: var(--sp-color-primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--sp-color-primary), var(--sp-color-success));
+  animation: fillIn 1s ease 0.5s both;
+}
+
+@keyframes fillIn {
+  from { width: 0; }
+}
+
+.percent {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-color-success);
+  min-width: 40px;
+}
+
+.message {
+  font-size: 13px;
+  color: var(--sp-color-text-secondary);
+  line-height: 1.6;
+}

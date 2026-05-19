@@ -1,0 +1,126 @@
+.container {
+  padding: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sp-color-text);
+  margin-bottom: 20px;
+}
+
+.summaryRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.summaryCard {
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summaryLabel {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+}
+
+.summaryValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--sp-color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.summaryMeta {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+}
+
+.comparison {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.up {
+  color: var(--sp-status-done);
+}
+
+.down {
+  color: var(--sp-color-error);
+}
+
+.chartSection {
+  margin-bottom: 24px;
+}
+
+.chartTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sp-color-text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Goal progress */
+.goalGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.goalGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goalGroupLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sp-color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.goalItem {
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  padding: 10px 12px;
+}
+
+.goalInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.goalTitle {
+  font-size: 13px;
+  color: var(--sp-color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+.goalPercent {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sp-color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}

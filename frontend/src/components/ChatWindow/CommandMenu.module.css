@@ -1,0 +1,64 @@
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-bottom: 4px;
+  z-index: 50;
+}
+
+.menu {
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-lg);
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  animation: slideUp var(--sp-transition-fast) ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+  padding: 6px 10px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sp-color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--sp-radius-md);
+  cursor: pointer;
+  transition: background var(--sp-transition-fast);
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  color: var(--sp-color-text);
+}
+
+.item:hover,
+.itemActive {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.command {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sp-color-primary-hover);
+  min-width: 72px;
+}
+
+.desc {
+  font-size: 13px;
+  color: var(--sp-color-text-secondary);
+}

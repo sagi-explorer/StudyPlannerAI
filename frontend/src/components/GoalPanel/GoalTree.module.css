@@ -1,0 +1,89 @@
+.tree {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ultimateBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: var(--sp-radius-sm);
+  transition: all var(--sp-transition-fast);
+  font-family: inherit;
+}
+
+.toggleBtn:hover {
+  color: var(--sp-color-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.children {
+  margin-left: 20px;
+  padding-left: 16px;
+  border-left: 2px solid var(--sp-color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.monthlyBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.weeklyList {
+  margin-left: 16px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(124, 58, 237, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: var(--sp-color-text-secondary);
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--sp-color-text);
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 13px;
+  color: var(--sp-color-text-secondary);
+  margin-bottom: 20px;
+  max-width: 300px;
+  line-height: 1.6;
+}

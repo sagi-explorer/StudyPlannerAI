@@ -1,0 +1,75 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.group {
+  background: var(--sp-color-bg-elevated);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-lg);
+  overflow: hidden;
+}
+
+.groupToday {
+  border-color: var(--sp-color-primary);
+}
+
+.groupOverdue {
+  border-color: var(--sp-status-overdue);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--sp-color-border);
+}
+
+.dateLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sp-color-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.todayBadge {
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 10px;
+  background: var(--sp-color-primary);
+  color: #fff;
+}
+
+.overdueBadge {
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 10px;
+  background: var(--sp-status-overdue);
+  color: #fff;
+}
+
+.taskCount {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+}
+
+.groupBody {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  color: var(--sp-color-text-secondary);
+  font-size: 13px;
+}

@@ -1,0 +1,232 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  flex-shrink: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--sp-color-border);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sp-color-text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+}
+
+.filterBtn {
+  padding: 4px 12px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-sm);
+  background: transparent;
+  color: var(--sp-color-text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--sp-transition-fast);
+}
+
+.filterBtn:hover {
+  border-color: var(--sp-color-primary);
+  color: var(--sp-color-text);
+}
+
+.filterActive {
+  background: var(--sp-color-primary);
+  border-color: var(--sp-color-primary);
+  color: #fff;
+}
+
+.filterActive:hover {
+  color: #fff;
+}
+
+.generateBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.generateBtn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: var(--sp-radius-sm);
+  background: var(--sp-color-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background var(--sp-transition-fast);
+  white-space: nowrap;
+}
+
+.generateBtn:hover:not(:disabled) {
+  background: var(--sp-color-primary-hover);
+}
+
+.generateBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: var(--sp-radius-sm);
+  background: rgba(255, 77, 79, 0.1);
+  color: #ff4d4f;
+  font-size: 13px;
+}
+
+.generating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: var(--sp-radius-sm);
+  background: rgba(var(--sp-color-primary-rgb, 22, 119, 255), 0.08);
+  color: var(--sp-color-primary);
+  font-size: 13px;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 12px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--sp-color-text-secondary);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  color: var(--sp-color-text-secondary);
+  font-size: 14px;
+  gap: 8px;
+}
+
+.emptyIcon {
+  font-size: 40px;
+  opacity: 0.4;
+}
+
+.emptyHint {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* --- Review card (list item) --- */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md, 8px);
+  background: var(--sp-color-bg-container);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all var(--sp-transition-fast);
+}
+
+.card:hover {
+  border-color: var(--sp-color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cardUnread {
+  border-left: 3px solid var(--sp-color-primary);
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.typeBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cardPeriod {
+  font-size: 14px;
+  color: var(--sp-color-text);
+  font-weight: 500;
+}
+
+.cardTime {
+  font-size: 11px;
+  color: var(--sp-color-text-secondary);
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.miniStats {
+  display: flex;
+  gap: 16px;
+}
+
+.statItem {
+  font-size: 12px;
+  color: var(--sp-color-text-secondary);
+}
+
+.statItem strong {
+  color: var(--sp-color-text);
+  margin-left: 4px;
+}
+
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sp-color-primary);
+  flex-shrink: 0;
+}
